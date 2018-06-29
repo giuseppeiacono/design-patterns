@@ -11,7 +11,13 @@ The main interfaces are:
 ![Alt text](documentation/basic-info.png?raw=true "Observer pattern")
 
 ### New OO principles
+_Strive for loosely coupled designs between objects that interact_
 
+> Observer pattern ensure that subject (Observable) and observers are loosely coupled making very flexible the design:
+> + subject is only know about observers that they implement a specific observer interface
+> + we can add new observers without change subject
+> + subject and observers are reusable independently of each other
+> + if you change subject or observers does not affect the other
 
 ### Observations
 Follow a short list of observations that could help you to understand better how this pattern works: 
