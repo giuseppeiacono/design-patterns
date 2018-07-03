@@ -7,11 +7,11 @@ and if it could be a candidate for the solution you want to provide.
 This repo consists of one project per design pattern. 
 Each of them provides:
 + the implementation of pattern 
-+ tests 
++ Junit tests to check how pattern works
 + README file that resumes the most important details of current pattern:
-    - Overview: applicability of pattern
-    - Pattern info: definition, new OO principles, class diagram and observations
-    - Pattern implementation: details of implementation proposed in the current project and real implementation examples like Java classes
+    - _Overview_ : applicability of pattern
+    - _Pattern info_ : definition, new OO principles, class diagram and observations
+    - _Pattern implementation_ : details of implementation proposed in the current project and real implementation examples like Java classes
     
 ### Object Oriented principles
 The design patterns proposed in this project are based on various OO principles.
