@@ -21,29 +21,36 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
  */
-package com.pippo;
+package com.pippo.component;
 
 /**
- * Cappuccino beverage.
+ * Abstract class that represent all beverages and extra ingredients offered by our bar.
  *
  * --------------------------------------------------------------------------------------------------------------------------
  * PATTERN NOTES:
  *
- * All classes that extend directly the abstract class Beverage are called component in this pattern.
- * Their instances can be wrapped by decorators.
+ * Components = beverages
+ * Decorators = extra ingredients
+ *
+ * Both components and decorators must extend this class just to have the same type.
+ * In this way decorators can wrap components and add new behaviours
  * --------------------------------------------------------------------------------------------------------------------------
  *
  * @author Giuseppe Iacono
  */
-public class Cappuccino extends Beverage {
+public abstract class Beverage {
 
-    public Cappuccino() {
-        beverageDescription = "Cappuccino";
+    String beverageDescription = "Undefined Beverage";
+
+    public String getBeverageDescription() {
+        return beverageDescription;
     }
 
-    @Override
-    public double getBeverageCost() {
-        return 1.20;
-    }
+    /**
+     * Calculate the cost of beverage including extra ingredients required by client.
+     *
+     * @return the total cost of beverage
+     */
+    public abstract double getBeverageCost();
 
 }

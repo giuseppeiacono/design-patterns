@@ -21,7 +21,9 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
  */
-package com.pippo;
+package com.pippo.decorator;
+
+import com.pippo.component.Beverage;
 
 /**
  * Extra ingredient cocoa.

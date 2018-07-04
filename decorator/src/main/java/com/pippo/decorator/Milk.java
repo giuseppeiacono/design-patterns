@@ -21,36 +21,39 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
  */
-package com.pippo;
+package com.pippo.decorator;
+
+import com.pippo.component.Beverage;
 
 /**
- * Abstract class that represent all beverages and extra ingredients offered by our bar.
+ * Extra ingredient milk.
  *
  * --------------------------------------------------------------------------------------------------------------------------
  * PATTERN NOTES:
  *
- * Components = beverages
- * Decorators = extra ingredients
- *
- * Both components and decorators must extend this class just to have the same type.
- * In this way decorators can wrap components and add new behaviours
+ * This class is a decorator because it extends ExtraIngredients.
+ * The composition allows to add new behaviour at runtime because the reference of beverage is saved when Milk is instantiated.
  * --------------------------------------------------------------------------------------------------------------------------
  *
  * @author Giuseppe Iacono
  */
-public abstract class Beverage {
+public class Milk extends ExtraIngredients {
 
-    String beverageDescription = "Undefined Beverage";
+    // Beverage wrapped by this decorator
+    private Beverage beverage;
 
-    public String getBeverageDescription() {
-        return beverageDescription;
+    public Milk(final Beverage beverage) {
+        this.beverage = beverage;
     }
 
-    /**
-     * Calculate the cost of beverage including extra ingredients required by client.
-     *
-     * @return the total cost of beverage
-     */
-    public abstract double getBeverageCost();
+    @Override
+    public String getBeverageDescription() {
+        return beverage.getBeverageDescription() + ", Milk";
+    }
+
+    @Override
+    public double getBeverageCost() {
+        return beverage.getBeverageCost() + 0.3;
+    }
 
 }

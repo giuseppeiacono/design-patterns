@@ -23,6 +23,11 @@
  */
 package com.pippo;
 
+import com.pippo.component.Beverage;
+import com.pippo.component.Cappuccino;
+import com.pippo.component.Espresso;
+import com.pippo.decorator.Cocoa;
+import com.pippo.decorator.Milk;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

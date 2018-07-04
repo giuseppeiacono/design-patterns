@@ -21,27 +21,29 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
  */
-package com.pippo;
+package com.pippo.component;
 
 /**
- * Extra ingredients.
+ * Espresso beverage.
  *
  * --------------------------------------------------------------------------------------------------------------------------
  * PATTERN NOTES:
  *
- * All classes that extend this class will be called decorators in this pattern.
- * They must provide description and cost of the beverage which wrapped.
+ * All classes that extend directly the abstract class Beverage are called component in this pattern.
+ * Their instances can be wrapped by decorators.
  * --------------------------------------------------------------------------------------------------------------------------
  *
  * @author Giuseppe Iacono
  */
-public abstract class ExtraIngredients extends Beverage {
+public class Espresso extends Beverage {
 
-    /**
-     * Create a complete description of beverage required by client, including extra ingredients.
-     *
-     * @return beverage description
-     */
-    public abstract String getBeverageDescription();
+    public Espresso() {
+        beverageDescription = "Espresso";
+    }
+
+    @Override
+    public double getBeverageCost() {
+        return 0.80;
+    }
 
 }

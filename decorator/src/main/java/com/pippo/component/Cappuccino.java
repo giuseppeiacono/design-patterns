@@ -21,10 +21,10 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
  */
-package com.pippo;
+package com.pippo.component;
 
 /**
- * Espresso beverage.
+ * Cappuccino beverage.
  *
  * --------------------------------------------------------------------------------------------------------------------------
  * PATTERN NOTES:
@@ -35,15 +35,15 @@ package com.pippo;
  *
  * @author Giuseppe Iacono
  */
-public class Espresso extends Beverage {
+public class Cappuccino extends Beverage {
 
-    public Espresso() {
-        beverageDescription = "Espresso";
+    public Cappuccino() {
+        beverageDescription = "Cappuccino";
     }
 
     @Override
     public double getBeverageCost() {
-        return 0.80;
+        return 1.20;
     }
 
 }
