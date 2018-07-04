@@ -21,10 +21,13 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
  */
-package com.pippo;
+package com.pippo.observable;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.pippo.observer.Client;
+import com.pippo.observer.Observer;
 
 /**
  * Online shop that offers notification service to registered clients that are waiting for products currently out of stock.

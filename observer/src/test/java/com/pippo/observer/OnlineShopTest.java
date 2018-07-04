@@ -21,8 +21,10 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
  */
-package com.pippo;
+package com.pippo.observer;
 
+import com.pippo.observable.OnlineShop;
+import com.pippo.observer.Client;
 import org.junit.Before;
 import org.junit.Test;
 

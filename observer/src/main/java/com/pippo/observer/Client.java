@@ -21,7 +21,9 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
  */
-package com.pippo;
+package com.pippo.observer;
+
+import com.pippo.observable.Observable;
 
 /**
  * Client of Online Shop.
@@ -41,15 +43,15 @@ package com.pippo;
  *
  * @author Giuseppe Iacono
  */
-public class Client implements com.pippo.Observer {
+public class Client implements Observer {
 
     // reference to Online Shop
-    private com.pippo.Observable observable = null;
+    private Observable observable = null;
 
     // name of client
     private String clientName;
 
-    public Client(final com.pippo.Observable observable, final String clientName) {
+    public Client(final Observable observable, final String clientName) {
         this.observable = observable;
         this.clientName = clientName;
     }

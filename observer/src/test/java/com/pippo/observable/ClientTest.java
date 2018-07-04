@@ -1,5 +1,7 @@
-package com.pippo;
+package com.pippo.observable;
 
+import com.pippo.observable.OnlineShop;
+import com.pippo.observer.Client;
 import org.junit.Test;
 
 import static org.mockito.Mockito.spy;

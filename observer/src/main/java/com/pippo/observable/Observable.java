@@ -21,18 +21,34 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
  */
-package com.pippo;
+package com.pippo.observable;
+
+import com.pippo.observer.Observer;
 
 /**
- * Custom observer interface.
+ * Custom observable interface.
  *
  * @author Giuseppe Iacono
  */
-public interface Observer {
+public interface Observable {
 
     /**
-     * Invoked by Online Shop when the product that client want to buy is in stock again
+     * Add observer to observers list
+     *
+     * @param observer the observer to register
      */
-    void update();
+    void addObserver(Observer observer);
+
+    /**
+     * Remove observer from observers list
+     *
+     * @param observer the observer to unregister
+     */
+    void removeObserver(Observer observer);
+
+    /**
+     * Notify all observers registered
+     */
+    void notifyObservers();
 
 }
